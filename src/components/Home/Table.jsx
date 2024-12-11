@@ -1,7 +1,13 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Table({datas, handleSort, sortConfig, currentPage, countriesPerPage}) {
+    const navigate = useNavigate();
+
+    function handleDetails(code) {
+        navigate(`/country/${code}`)
+    }
+
     return (
         <div className="table-responsive">
             <table className="table table-striped">
@@ -29,7 +35,7 @@ function Table({datas, handleSort, sortConfig, currentPage, countriesPerPage}) {
                 </thead>
                 <tbody>
                     {datas && datas.map((data, index) => (
-                        <tr key={index}>
+                        <tr key={index} onClick={() => handleDetails(data.cca2)}>
                             <td className="text-center">{(currentPage - 1) * countriesPerPage + index + 1}</td>
                             <td className="text-center">
                                 <img
@@ -39,11 +45,7 @@ function Table({datas, handleSort, sortConfig, currentPage, countriesPerPage}) {
                                     style={{ height: "30px", width: "50px" }}
                                 />
                             </td>
-                            <td>
-                                <Link to={`/country/${data.cca2}`} className="text-decoration-none text-primary">
-                                    {data.name}
-                                </Link>
-                            </td>
+                            <td>{data.name}</td>
                             <td className="text-center">{data.cca2}</td>
                             <td>{data.capital}</td>
                             <td className="text-end">

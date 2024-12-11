@@ -1,5 +1,5 @@
 import Pagination from "./Pagination";
-import Search from "./Search";
+import Search from "../utils/Search";
 
 function Header({search, pagination}) {
     return (

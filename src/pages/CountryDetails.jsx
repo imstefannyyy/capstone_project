@@ -57,7 +57,6 @@ function CountryDetails() {
     const countries = useSelector(state => state.countries);
     const country = countries.find(country => country.cca2 === cca2);
 
-    // Dynamically extract currencies from the country data
     const currencyNames = Object.values(country.currencies).map(currency => currency.name);
     const currencySymbols = Object.values(country.currencies).map(currency => currency.symbol);
 

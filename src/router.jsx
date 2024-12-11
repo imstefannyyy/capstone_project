@@ -3,6 +3,9 @@ import { createBrowserRouter, redirect } from 'react-router-dom';
 import Home from './pages/Home';
 import CountryDetails from './pages/CountryDetails';
 import MainLayout from './layouts/MainLayout';
+import CompareLayout from './layouts/CompareLayout';
+import CompareResult from './pages/CompareResult';
+import CompareSelect from './pages/CompareSelect';
 
 const router = createBrowserRouter([
     {
@@ -16,7 +19,21 @@ const router = createBrowserRouter([
             {
                 path: 'country/:cca2',
                 element: <CountryDetails />,
-            }
+            },
+            {
+                path: 'compare',
+                element: <CompareLayout />,
+                children: [
+                    {
+                        path: '',
+                        element: <CompareSelect />,
+                    },
+                    {
+                        path: ':code1/n/:code2',
+                        element: <CompareResult />,
+                    },
+                ]
+            },
         ]
     },
 ]);

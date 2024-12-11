@@ -21,9 +21,8 @@ function MainLayout() {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ml-auto">
                             <Nav.Link as={Link} to="/">Home</Nav.Link>
-                            <Nav.Link as={Link} to="/">Compare</Nav.Link>
+                            <Nav.Link as={Link} to="/compare">Compare</Nav.Link>
                             <Nav.Link as={Link} to="/">News/Articles</Nav.Link>
-                            {/* <Nav.Link as={Link} to="/compare">Compare</Nav.Link> */}
                             {/* <Nav.Link as={Link} to="/news">News/Articles</Nav.Link> */}
                         </Nav>
                     </Navbar.Collapse>
