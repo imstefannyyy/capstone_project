@@ -13,6 +13,7 @@ function News() {
 
     async function fetchData(searchTerm) {
         try {
+            setCurrentPage(1)
             const news = await axios({
                 method: 'GET',
                 url: `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchTerm}&api-key=${NYT_API_KEY}`,
