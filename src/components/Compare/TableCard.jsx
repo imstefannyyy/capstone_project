@@ -1,6 +1,6 @@
 import Map from "../utils/Maps";
 
-function TableCard({ data }) {
+function TableCard({ data, flagSize }) {
     return (
         <div className="w-100 card pt-3 px-1">
             <div className="d-flex justify-content-between border-bottom border-4 border-dark pb-2 px-2">
@@ -32,7 +32,7 @@ function TableCard({ data }) {
                         src={data.flags.png}
                         alt={`${data.name} flag`}
                         className="img-fluid border border-dark w-50"
-                        style={{ height: "100px" }}
+                        style={{ height: flagSize || "100px" }}
                     />
                 </div>
                 <table className="table table-bordered">
