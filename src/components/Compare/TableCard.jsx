@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'; 
+import Map from "../utils/Maps";
 
 function TableCard({ data }) {
     return (
@@ -76,23 +76,7 @@ function TableCard({ data }) {
                         <tr>
                             <td className="fw-bold w-25">Map</td>
                             <td>
-                                {data.latlng && data.latlng.length === 2 ? (
-                                    <MapContainer
-                                        center={data.latlng}
-                                        zoom={6}
-                                        style={{ height: '200px', width: '100%' }} // Peta dengan ukuran 150px x 200px
-                                    >
-                                        <TileLayer
-                                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                                        />
-                                            <Marker position={data.latlng}>
-                                            <Popup>{data.name}</Popup>
-                                        </Marker>
-                                    </MapContainer>
-                                ) : (
-                                    <p>No map data available.</p>
-                                )}
+                                <Map coordinate={data.latlng} name={data.name} />
                             </td>
                         </tr>
                     </tbody>

@@ -6,10 +6,11 @@ import MainLayout from './layouts/MainLayout';
 import CompareLayout from './layouts/CompareLayout';
 import CompareResult from './pages/CompareResult';
 import CompareSelect from './pages/CompareSelect';
+import News from './pages/News';
 
 const router = createBrowserRouter([
     {
-        path: "/",
+        path: "",
         element: <MainLayout />,
         children: [
             {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
                         element: <CompareResult />,
                     },
                 ]
+            },
+            {
+                path: 'news',
+                element: <News />,
             },
         ]
     },

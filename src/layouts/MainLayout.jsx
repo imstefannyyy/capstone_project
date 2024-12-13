@@ -8,7 +8,6 @@ function MainLayout() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        console.log("fetching countries")
         dispatch(fetchCountries());
     }, []);
 
@@ -22,8 +21,7 @@ function MainLayout() {
                         <Nav className="ml-auto">
                             <Nav.Link as={Link} to="/">Home</Nav.Link>
                             <Nav.Link as={Link} to="/compare">Compare</Nav.Link>
-                            <Nav.Link as={Link} to="/">News/Articles</Nav.Link>
-                            {/* <Nav.Link as={Link} to="/news">News/Articles</Nav.Link> */}
+                            <Nav.Link as={Link} to="/news">News/Articles</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </div>

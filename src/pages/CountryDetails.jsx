@@ -1,54 +1,3 @@
-// import { useParams } from "react-router-dom";
-// import { useSelector } from "react-redux";
-
-// function CountryDetails() {
-//     const { cca2 } = useParams();
-//     const countries = useSelector(state => state.countries);
-//     const country = countries.find(country => country.cca2 === cca2);
-//     return (
-//         <div className="container-fluid px-lg-5 pt-3">
-//             <div className="d-flex justify-content-between border-bottom border-4 border-dark mb-2">
-//                 <div className="d-flex flex-column">
-//                     <div className="d-flex">
-//                         <h1>{country.name}</h1>
-//                         <h6 className="text-muted ms-2">{country.cca2}</h6>
-//                     </div>
-//                     <h5 className="text-muted">{country.region}</h5>
-//                 </div>
-//                 <div className="d-flex">
-//                     <img
-//                         src={country.coatOfArms.png}
-//                         alt={`${country.name} coat of arms`}
-//                         className="img-fluid"
-//                         style={{ height: "75px", width: "75px" }}
-//                     />
-//                 </div>
-//             </div>
-//             <div className="d-flex">
-//                 <div className="col-4 col-sm-12">
-//                     <img
-//                         src={country.flags.png}
-//                         alt={`${country.name} flag`}
-//                         className="img-fluid border border-dark"
-//                         // style={{ height: "80px", width: "120px" }}
-//                     />
-//                 </div>
-//                 {/* <div className="col-8 col-sm-12"> */}
-//                     {/* <table className="table table-borderless">
-//                     </table> */}
-//                 {/* </div> */}
-//             </div>
-//             <p>Capital: {country.capital}</p>
-//             <p>Area: {country.area} km²</p>
-//             <p>Region: {country.region}</p>
-//             <p>Subregion: {country.subregion}</p>
-//             <p>Population: {country.population}</p>
-//         </div>
-//     );
-// }
-
-// export default CountryDetails;
-
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -145,4 +94,3 @@ function CountryDetails() {
 }
 
 export default CountryDetails;
-

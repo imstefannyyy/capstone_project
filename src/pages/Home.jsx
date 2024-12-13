@@ -52,21 +52,13 @@ function Home() {
         setCurrentPage(currentPage - 1);
     }
 
-    function handleCountriesPerPageChange(e) {
-        setCountriesPerPage(parseInt(e.target.value));
-        setCurrentPage(1);
-    }
-
     return (
         <>
             <Header
                 search={{searchTerm, setSearchTerm}}
                 pagination={{
                     currentPage,
-                    setCurrentPage,
                     totalPages,
-                    countriesPerPage,
-                    handleCountriesPerPageChange,
                     handleNextPage,
                     handlePrevPage,
                 }}
